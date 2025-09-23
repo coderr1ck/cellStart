@@ -320,6 +320,14 @@
             line-height: 1.6;
             margin-bottom: 2rem;
         }
+
+        .product-description {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.25rem;
+            color: #64748b;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
         
         .advantage-cards {
             display: grid;
@@ -532,6 +540,7 @@
             display: flex;
             align-items: flex-start;
             gap: 1rem;
+            vertical-align: baseline;
             /* padding: 1.5rem; */
             /* background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%); */
             border-radius: 0.75rem;
@@ -673,8 +682,8 @@
             align-items: center;
             justify-content: center;
             background-color: #4CAF50; /* Green background */
-            width: 30px;
-            height: 30px;
+            min-width: 30px;
+            min-height: 30px;
             border-radius: 50%;
         }
         .tick-circle svg {
@@ -720,6 +729,8 @@
             .benefits-cta .btn {
                 width: auto;
             }
+
+            
         }
         
         @media (min-width: 768px) {
@@ -747,6 +758,11 @@
             .footer-grid {
                 grid-template-columns: repeat(4, 1fr);
             }
+            
+            /* .product-description{
+                font-size: 1.25rem;
+            } */
+            
         }
         
         @media (min-width: 1024px) {
@@ -858,7 +874,7 @@
                             ChronoNAD+ 
                         </h2>
                         
-                        <p class="advantage-description">
+                        <p class="product-description">
                             ChronoNAD+ is a dietary supplement taken once a day. As we age, our NAD+ levels decline, impacting our cellular health and energy. Our supplement is designed to restore these levels, helping you feel more vibrant and energized.
                         </p>
 
@@ -1082,6 +1098,7 @@
                                     <h3>Supports healthy aging and longevity pathways</h3>
                                 </div>
                             </div>
+                            
 
                             <div class="benefit-item">
                                 <div class="tick-circle" role="img" aria-label="Success">
