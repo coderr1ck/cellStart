@@ -19,10 +19,15 @@
     
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="./favicon_io/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://res.cloudinary.com/project-euler-v0/image/upload/f_auto,q_auto,c_fill,dpr_auto/v1758658665/apple-touch-icon_xuycqi.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://res.cloudinary.com/project-euler-v0/image/upload/f_auto,q_auto,c_fill,dpr_auto/v1758658669/favicon-32x32_vxfdde.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://res.cloudinary.com/project-euler-v0/image/upload/f_auto,q_auto,c_fill,dpr_auto/v1758658667/favicon-16x16_axuarc.png">
+    <link rel="manifest" href="https://res.cloudinary.com/project-euler-v0/raw/upload/f_auto,q_auto,c_fill,dpr_auto/v1758658669/site_eg7ooo.webmanifest">
+    <link rel="preload" 
+        as="image" 
+        href="https://res.cloudinary.com/project-euler-v0/image/upload/f_auto,q_auto,c_fill,dpr_auto/v1758658583/hero-banner_mccsf4.png" 
+        type="image/jpeg"
+    />
     <style>
         /* 
         Purpose: CellStart ChronoNAD+ Landing Page - Premium NAD+ Supplement Brand
@@ -50,7 +55,10 @@
             background: #ffffff;
         }
         
-        /* Typography Classes */
+        /* Typography Classes (commented out - unused).
+           Disabled on 2025-09-29 during CSS audit. Restore if needed.
+        */
+        /*
         .font-cabin {
             font-family: 'Cabin', -apple-system, BlinkMacSystemFont, sans-serif;
         }
@@ -62,6 +70,7 @@
         .font-source {
             font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
         }
+        */
         
         /* Container */
         .container {
@@ -69,6 +78,16 @@
             margin: 0 auto;
             padding: 0 1rem;
         }
+
+        /* #cart (commented out - no element with id="cart" found).
+           Disabled on 2025-09-29 during CSS audit. Restore if needed.
+        */
+        /*
+        #cart {
+            margin-top: 48px; 
+            padding-right: 10px;
+        }
+        */
         
         /* Button Styles */
         .btn {
@@ -172,6 +191,10 @@
             margin-bottom: 0.5rem;
         }
         
+        /* .brand-line (commented out - not referenced in current HTML).
+           Disabled on 2025-09-29 during CSS audit. Restore if needed.
+        */
+        /*
         .brand-line {
             width: 6rem;
             height: 4px;
@@ -179,6 +202,7 @@
             margin: 0 auto;
             border-radius: 9999px;
         }
+        */
         
         .hero-headline {
             font-family: 'Cabin', sans-serif;
@@ -285,16 +309,42 @@
             padding-top: 5rem ;
             background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);
         }
+
+        /* .cartItemContent (kept but disabled inside a media rule so nested comments remain valid).
+           Disabled on 2025-09-29 during CSS audit. Restore if needed by removing the @media wrapper.
+        */
+        @media (max-width: 0px) {
+        .cartItemContent {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            gap: 0.5rem;
+            white-space: nowrap;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            border: none;
+            /* text-decoration: none; */
+            font-size: 1rem;
+            padding: 0.875rem 2.5rem;
+            /* min-height: 3.5rem; */
+            
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            font-family: 'Cabin', sans-serif;
+            font-weight: 600;
+        }
+        }
         
         .advantage-grid {
             display: grid;
             grid-template-columns: 1fr;
             gap: 3rem;
             align-items: center;
-        }
-        
-        .advantage-content {
-            space-y: 1.5rem;
         }
         
         .advantage-title {
@@ -367,8 +417,16 @@
             margin-top: 1rem;
             padding-top: 1rem;
             padding-bottom: 5rem;
-            border-top: 1px solid rgba(226, 232, 240, 0.9);
         }
+
+        /* #cartbox (commented out - no element with id="cartbox" found in HTML).
+           Disabled on 2025-09-29 during CSS audit. Restore if needed.
+        */
+        /*
+        #cartbox{
+            display:block;
+        }
+        */
         
         .citation p {
             font-family: 'Source Sans Pro', sans-serif;
@@ -454,6 +512,14 @@
             max-width: 32rem;
             margin: 0 auto;
         }
+
+        .explore-subtitle {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.25rem;
+            color: #64748b;
+            max-width: 40rem;
+            margin: 0 auto;
+        }
         
         .benefits-grid {
             display: grid;
@@ -481,11 +547,15 @@
         }
 
 
+        /* .benefits-image-container2 (commented out - unused image container).
+           Disabled on 2025-09-29 during CSS audit. Restore if needed.
+        */
+        /*
         .benefits-image-container2 {
             position: relative;
             border-radius: 1rem;
             overflow: hidden;
-            /* box-shadow: 0 20px 40px -10px rgba(0, 47, 92, 0.15); */
+            box-shadow: 0 20px 40px -10px rgba(0, 47, 92, 0.15);
         }
 
         .benefits-image-container2 img {
@@ -493,6 +563,7 @@
             height: 32rem;
             object-fit: cover;
         }
+        */
         
         .benefits-image-overlay {
             position: absolute;
@@ -507,7 +578,7 @@
             background: white;
             box-shadow: 0 0 30px rgba(94, 163, 214, 0.2);
             border-radius: 0.75rem;
-            padding: 1rem;
+            padding: 1rem; 
             max-width: 18rem;
         }
         
@@ -546,10 +617,6 @@
             border-radius: 0.75rem;
             /* box-shadow: 0 10px 30px -5px rgba(0, 47, 92, 0.1); */
             /* transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); */
-        }
-        
-        .benefit-item:hover {
-            /* box-shadow: 0 20px 40px -10px rgba(0, 47, 92, 0.15); */
         }
         
         .benefit-icon {
@@ -670,6 +737,13 @@
             padding-top: 2rem;
             text-align: center;
         }
+
+        #cartbox{
+             background-color: #E4E4E9; 
+             line-height: 0px;
+             border-top-left-radius: 20%;
+             border-bottom-left-radius: 20%;
+        }
         
         .footer-bottom p {
             font-family: 'Source Sans Pro', sans-serif;
@@ -698,6 +772,700 @@
             margin-left: 10px;  
             gap: 12px;
         }
+
+        /* Product Carousel Section */
+        .product-carousel-section {
+            padding: 5rem 0;
+            background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);
+        }
+        
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 1rem;
+            background: white;
+            box-shadow: 0 20px 40px -10px rgba(0, 47, 92, 0.15);
+        }
+        
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .carousel-slide {
+            min-width: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            padding: 2rem;
+            align-items: center;
+        }
+        
+        /* Product Image Container */
+        .carousel-product-image {
+            position: relative;
+            background: linear-gradient(135deg, rgba(0, 47, 92, 0.05) 0%, rgba(94, 163, 214, 0.05) 100%);
+            border-radius: 1rem;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 300px;
+            order: 1;
+        }
+        
+        .carousel-product-image img {
+            max-width: 100%;
+            max-height: 350px;
+            object-fit: contain;
+            transition: transform 0.4s ease;
+        }
+        
+        .carousel-slide:hover .carousel-product-image img {
+            transform: scale(1.05);
+        }
+        
+        .carousel-product-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: linear-gradient(135deg, #002f5c 0%, #4a7ba7 50%, #5ea3d6 100%);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-family: 'Cabin', sans-serif;
+            font-weight: 600;
+            font-size: 0.875rem;
+            box-shadow: 0 0 20px rgba(94, 163, 214, 0.3);
+        }
+        
+        /* Product Details */
+        .carousel-product-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            order: 2;
+        }
+        
+        .carousel-product-name {
+            font-family: 'Cabin', sans-serif;
+            font-weight: 700;
+            font-size: 2rem;
+            color: #002f5c;
+            margin-bottom: 0.5rem;
+        }
+        
+        .carousel-product-tagline {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            color: #5ea3d6;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        
+        .carousel-product-description {
+            font-family: 'Source Sans Pro', sans-serif;
+            color: #64748b;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .carousel-product-features {
+            display: grid;
+            gap: 0.75rem;
+            margin-bottom: 2rem;
+        }
+        
+        .carousel-feature-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .carousel-feature-text {
+            font-family: 'Source Sans Pro', sans-serif;
+            color: #002f5c;
+            font-size: 0.95rem;
+        }
+        
+        .carousel-product-footer {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e2e8f0;
+        }
+        
+        .carousel-price-section {
+            display: flex;
+            align-items: baseline;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+        
+        .carousel-price-current {
+            font-family: 'Cabin', sans-serif;
+            font-weight: 700;
+            font-size: 2.5rem;
+            color: #002f5c;
+        }
+        
+        .carousel-price-original {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 1.5rem;
+            color: #94a3b8;
+            text-decoration: line-through;
+        }
+        
+        .carousel-price-save {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.875rem;
+            color: #4CAF50;
+            font-weight: 500;
+        }
+        
+        /* Carousel Navigation */
+        .carousel-navigation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .carousel-nav-btn {
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            border: 2px solid #5ea3d6;
+            color: #5ea3d6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.5rem;
+            font-weight: bold;
+            position: relative;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(94, 163, 214, 0.2);
+            backdrop-filter: blur(10px);
+        }
+        
+        .carousel-nav-btn:hover {
+            background: linear-gradient(135deg, #5ea3d6 0%, #002f5c 100%);
+            color: white;
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(94, 163, 214, 0.4);
+            border-color: #002f5c;
+        }
+        
+        .carousel-nav-btn:active {
+            transform: scale(1.05);
+            transition: all 0.1s ease;
+        }
+        
+        .carousel-nav-btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+            background: #f1f5f9;
+            color: #94a3b8;
+            border-color: #cbd5e1;
+            box-shadow: none;
+        }
+        
+        .carousel-nav-btn:disabled:hover {
+            background: #f1f5f9;
+            color: #94a3b8;
+            transform: scale(1);
+            box-shadow: none;
+        }
+        
+        /* Add arrow icons for better UX */
+        .carousel-nav-btn.prev::before {
+            content: '‹';
+            font-size: 2rem;
+            line-height: 1;
+        }
+        
+        .carousel-nav-btn.next::before {
+            content: '›';
+            font-size: 2rem;
+            line-height: 1;
+        }
+        
+        /* Responsive navigation buttons */
+        @media (max-width: 768px) {
+            .carousel-nav-btn {
+                width: 3rem;
+                height: 3rem;
+            }
+            
+            .carousel-nav-btn.prev::before,
+            .carousel-nav-btn.next::before {
+                font-size: 1.75rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .carousel-nav-btn {
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+            
+            .carousel-nav-btn.prev::before,
+            .carousel-nav-btn.next::before {
+                font-size: 1.5rem;
+            }
+            
+            .carousel-indicators {
+                gap: 0.5rem;
+                padding: 0 0.5rem;
+            }
+            
+            .carousel-indicator {
+                width: 0.625rem;
+                height: 0.625rem;
+            }
+        }
+        
+        .carousel-indicators {
+            display: flex;
+            gap: 0.75rem;
+            padding: 0 1rem;
+        }
+        
+        .carousel-indicator {
+            width: 0.75rem;
+            height: 0.75rem;
+            border-radius: 50%;
+            background: rgba(203, 213, 225, 0.6);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            position: relative;
+        }
+        
+        .carousel-indicator:hover {
+            background: rgba(94, 163, 214, 0.7);
+            transform: scale(1.2);
+        }
+        
+        .carousel-indicator.active {
+            background: #5ea3d6;
+            width: 2rem;
+            border-radius: 0.5rem;
+            border-color: #002f5c;
+            box-shadow: 0 2px 8px rgba(94, 163, 214, 0.4);
+        }
+        
+        .carousel-indicator.active:hover {
+            transform: scale(1.1);
+        }
+
+        /* Cart Drawer Styles */
+        
+        /* Z-Index Hierarchy */
+        .cart-overlay {
+            z-index: 1000;
+        }
+        
+        .cart-drawer {
+            z-index: 1001;
+        }
+        
+        .cart-icon {
+            display:flex;
+            z-index: 1002;
+        }
+        
+        .carousel-nav-btn {
+            z-index: 100;
+        }
+        
+        /* .toast-notification (commented out - toasts are created without this class in JS).
+           Disabled on 2025-09-29 during CSS audit. Restore if needed.
+        */
+        /*
+        .toast-notification {
+            z-index: 1010;
+        }
+        */
+        
+        /* Cart Overlay */
+        .cart-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .cart-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        /* Cart Icon Container */
+        .cart-icon-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1002;
+        }
+        
+        @media (max-width: 768px) {
+            .cart-icon-container {
+                top: 40px;
+                right: 28px;
+            }
+        }
+        
+        .cart-icon {
+            position: relative;
+            cursor: pointer;
+            background-color: #E4E4E9;
+            padding: 10px;
+            border-radius: 20%;
+            transition: all 0.3s ease;
+        }
+        
+        .cart-icon:hover {
+            background-color: #cbd5e1;
+            transform: scale(1.05);
+        }
+        
+        .cart-counter {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background-color: #ef4444;
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 600;
+            font-family: 'Source Sans Pro', sans-serif;
+            opacity: 0;
+            transform: scale(0);
+            transition: all 0.3s ease;
+        }
+        
+        .cart-counter.has-items {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        /* Cart Drawer */
+        .cart-drawer {
+            position: fixed;
+            top: 0;
+            left: -400px;
+            width: 400px;
+            height: 100dvh;
+            background: white;
+            box-shadow: 4px 0 20px rgba(0, 0, 0, 0.15);
+            transition: left 0.3s ease;
+            z-index: 1001;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .cart-drawer.active {
+            left: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .cart-drawer {
+                width: 70%;
+                left: -70%;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .cart-drawer {
+                width: 80%;
+                left: -80%;
+            }
+        }
+        
+        .cart-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid #e2e8f0;
+            background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        
+        @media (max-width: 768px) {
+            .cart-header {
+                padding: 1rem;
+            }
+            
+            .cart-title {
+                font-size: 1.1rem;
+            }
+            
+            .cart-close-btn {
+                width: 1.75rem;
+                height: 1.75rem;
+                font-size: 1.1rem;
+            }
+        }
+        
+        .cart-header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .cart-title {
+            font-family: 'Cabin', sans-serif;
+            font-weight: 700;
+            color: #002f5c;
+            font-size: 1.25rem;
+            margin: 0;
+        }
+        
+        .cart-close-btn {
+            width: 2rem;
+            height: 2rem;
+            border: none;
+            background: #ef4444;
+            color: white;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            font-weight: 700;
+            transition: all 0.2s ease;
+        }
+        
+        .cart-close-btn:hover {
+            background: #dc2626;
+            transform: scale(1.1);
+        }
+        
+        .cart-content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 1rem;
+        }
+        
+        .cart-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            border-bottom: 1px solid #e2e8f0;
+            background: white;
+            margin-bottom: 0.5rem;
+            border-radius: 0.5rem;
+            transition: background-color 0.2s ease;
+        }
+        
+        .cart-item:hover {
+            background: #f8fafc;
+        }
+        
+        @media (max-width: 768px) {
+            .cart-item {
+                gap: 0.75rem;
+                padding: 0.875rem;
+            }
+            
+            .cart-item-name {
+                font-size: 0.85rem;
+            }
+            
+            .cart-item-price {
+                font-size: 0.8rem;
+            }
+            
+            .quantity-display {
+                font-size: 0.875rem;
+                min-width: 1.25rem;
+            }
+            
+            .remove-item-btn {
+                padding: 0.3rem;
+                min-width: 26px;
+                min-height: 26px;
+            }
+        }
+        
+        .cart-item-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            flex-shrink: 0;
+            background: #f1f5f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .cart-item-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.2s ease, opacity 0.3s ease;
+            opacity: 0;
+        }
+        
+        .cart-item-image img.loaded {
+            opacity: 1;
+        }
+        
+        .cart-item-image:hover img.loaded {
+            transform: scale(1.05);
+        }
+        
+        .cart-item-details {
+            flex: 1;
+        }
+        
+        .cart-item-name {
+            font-family: 'Cabin', sans-serif;
+            font-weight: 600;
+            color: #002f5c;
+            font-size: 0.9rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .cart-item-price {
+            font-family: 'Source Sans Pro', sans-serif;
+            color: #5ea3d6;
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+        
+        .cart-item-quantity {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .quantity-btn {
+            width: 1.5rem;
+            height: 1.5rem;
+            border: 1px solid #cbd5e1;
+            background: white;
+            border-radius: 0.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 0.75rem;
+            color: #64748b;
+            transition: all 0.2s ease;
+        }
+        
+        .quantity-btn:hover {
+            background: #f1f5f9;
+            border-color: #94a3b8;
+        }
+        
+        .quantity-display {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: 600;
+            color: #002f5c;
+            min-width: 1.5rem;
+            text-align: center;
+        }
+        
+        .remove-item-btn {
+            background: #ef4444;
+            color: white;
+            border: none;
+            border-radius: 0.25rem;
+            padding: 0.4rem;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-family: 'Source Sans Pro', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 28px;
+            min-height: 28px;
+        }
+        
+        .remove-item-btn:hover {
+            background: #dc2626;
+            transform: scale(1.05);
+        }
+        
+        .cart-empty {
+            text-align: center;
+            padding: 2rem 1rem;
+            color: #64748b;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+        
+        .cart-total {
+            padding: 1rem;
+            border-top: 2px solid #e2e8f0;
+            background: #f8fafc;
+            margin-top: 1rem;
+        }
+        
+        .cart-total-label {
+            font-family: 'Cabin', sans-serif;
+            font-weight: 600;
+            color: #002f5c;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .cart-total-amount {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            color: #5ea3d6;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .checkout-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #002f5c 0%, #5ea3d6 100%);
+            color: white;
+            border: none;
+            border-radius: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            font-family: 'Cabin', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .checkout-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(94, 163, 214, 0.3);
+        }
+        
+        .checkout-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
         
         /* Animations */
         @keyframes fadeInUp {
@@ -730,7 +1498,6 @@
                 width: auto;
             }
 
-            
         }
         
         @media (min-width: 768px) {
@@ -759,6 +1526,30 @@
                 grid-template-columns: repeat(4, 1fr);
             }
             
+            /* Carousel Responsive Design */
+            .carousel-slide {
+                grid-template-columns: 1fr 1fr;
+                padding: 3rem;
+            }
+            
+            .carousel-product-image {
+                order: 1;
+            }
+            
+            .carousel-product-details {
+                order: 2;
+            }
+            
+            .carousel-product-name {
+                font-size: 2.5rem;
+            }
+            
+            .carousel-product-footer {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+            
             /* .product-description{
                 font-size: 1.25rem;
             } */
@@ -766,6 +1557,16 @@
         }
         
         @media (min-width: 1024px) {
+
+            #cart {
+                margin-top: 10px; 
+                padding-right: 10px;
+            }
+
+            #cartbox{
+             background-color: transparent;
+            }
+            
             .advantage-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -790,8 +1591,23 @@
             .benefits-title {
                 font-size: 5rem;
             }
+            
+            /* Carousel Desktop Layout */
+            .carousel-slide {
+                grid-template-columns: 45% 55%;
+                padding: 4rem;
+            }
+            
+            .carousel-product-image {
+                order: 1;
+            }
+            
+            .carousel-product-details {
+                order: 2;
+            }
         }
     </style>
+
 </head>
 <body>
     <!-- 
@@ -803,11 +1619,56 @@
     -->
     
     <main>
+
+        <!-- Cart Drawer -->
+        <!-- Cart System -->
+        
+        <!-- Cart Overlay -->
+        <div id="cartOverlay" class="cart-overlay" onclick="closeDrawer()"></div>
+        
+        <!-- Cart Drawer -->
+        <div id="drawer" class="cart-drawer">
+            <div class="cart-header">
+                <div class="cart-header-content">
+                    <h2 class="cart-title">Your Cart</h2>
+                    <button class="cart-close-btn" onclick="closeDrawer()">&times;</button>
+                </div>
+            </div>
+            
+            <div class="cart-content">
+                <!-- Cart Items Container -->
+                <div id="cartItemsContainer" class="flex flex-direction:column">
+                    <div class="cart-empty" id="cartEmptyMessage">
+                        Your cart is empty<br>
+                        <small>Add some products to get started!</small>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Cart Total and Checkout -->
+            <div id="cartFooter" class="cart-total" style="display: none;">
+                <div class="cart-total-label">Total:</div>
+                <div class="cart-total-amount" id="cartTotalAmount">$0.00</div>
+                <button class="checkout-btn" onclick="checkout()">
+                    Proceed to Checkout
+                </button>
+            </div>
+        </div>
+        
+        <!-- Cart Icon -->
+        <div class="cart-icon-container">
+            <div class="cart-icon" onclick="openDrawer()">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXNob3BwaW5nLWJhZy1pY29uIGx1Y2lkZS1zaG9wcGluZy1iYWciPjxwYXRoIGQ9Ik0xNiAxMGE0IDQgMCAwIDEtOCAwIi8+PHBhdGggZD0iTTMuMTAzIDYuMDM0aDE3Ljc5NCIvPjxwYXRoIGQ9Ik0zLjQgNS40NjdhMiAyIDAgMCAwLS40IDEuMlYyMGEyIDIgMCAwIDAgMiAyaDE0YTIgMiAwIDAgMCAyLTJWNi42NjdhMiAyIDAgMCAwLS40LTEuMmwtMi0yLjY2N0EyIDIgMCAwIDAgMTcgMkg3YTIgMiAwIDAgMC0xLjYuOHoiLz48L3N2Zz4=" alt="Shopping Cart">
+                <div id="cartItems" class="cart-counter">0</div>
+            </div>
+        </div>
+       
+       
         <!-- Hero Section -->
-        <section class="hero-section" aria-label="CellStart ChronoNAD+ hero introduction">
+        <section class="hero-section" aria-label="CellStart ChronoNAD+ hero introduction" >
             <!-- Background Image from brand assets: hero-banner.jpg -->
             <div class="hero-bg">
-                <img src="./assets/hero-banner.png" alt="CellStart NAD+ molecular research and cellular energy background showing scientific laboratory environment with DNA structures">
+                <img src="https://res.cloudinary.com/project-euler-v0/image/upload/f_auto,q_auto,c_fill,dpr_auto/v1758658583/hero-banner_mccsf4.png" alt="CellStart NAD+ molecular research and cellular energy background showing scientific laboratory environment with DNA structures">
                 <div class="hero-overlay"></div>
             </div>
 
@@ -816,7 +1677,7 @@
                 <div style="max-width: 64rem; margin: 0 auto;">
                     <!-- Brand Logo/Name -->
                     <div class="hero-brand">
-                        <img style="width: 200px;" src="./assets/logo2.png" alt="Cell Start" >
+                        <img style="width: 200px;" src="https://res.cloudinary.com/project-euler-v0/image/upload/f_auto,q_auto,c_fill,dpr_auto/v1758658583/logo2_vziqnf.png" alt="Cell Start" >
                     </div>
 
                     <!-- Main Headline -->
@@ -824,6 +1685,7 @@
                         Unlock Your 
                         <span class="hero-gradient-text">Cellular Potential</span>
                     </h2>
+
 
                     <!-- Sub-heading -->
                     <p class="hero-subtitle">
@@ -919,7 +1781,7 @@
                     <!-- Infographic from brand assets: advantage-infographic.jpg -->
                     <div class="advantage-image">
                         <div class="advantage-image-container">
-                            <img src="./assets/chrononad.png" alt="Scientific infographic showing 1.7x NAD+ level increase with ChronoNAD+ formula compared to standard NAD+ supplements">
+                            <img src="https://res.cloudinary.com/project-euler-v0/image/upload/f_auto,q_auto,c_fill,dpr_auto/v1758658582/chrononad_w9brty.png" alt="Scientific infographic showing 1.7x NAD+ level increase with ChronoNAD+ formula compared to standard NAD+ supplements">
                         
                         </div>
                         
@@ -931,6 +1793,36 @@
             </div>
         </section>
 
+        <!-- explore section  -->
+           <section class="product-carousel-section" id="products" aria-label="CellStart product carousel">
+            <div class="container">
+                <!-- Section Header -->
+                <div class="benefits-header">
+                    <h2 class="benefits-title">
+                        Explore Our 
+                        <span class="advantage-gradient-text"> Products</span>
+                        
+                    </h2>
+                    <p class="explore-subtitle">
+                        Choose the perfect NAD+ products for your wellness journey
+                    </p>
+                </div>
+
+                <!-- Carousel Container -->
+                <div class="carousel-container">
+                    <div class="carousel-track" id="carouselTrack">
+                        <!-- Dynamic slides will be generated here -->
+                    </div>
+                    
+                    <!-- Carousel Navigation -->
+                    <div class="carousel-navigation">
+                        <button class="carousel-nav-btn prev" id="prevBtn" onclick="previousSlide()" aria-label="Previous slide"></button>
+                        <div class="carousel-indicators" id="indicators"></div>
+                        <button class="carousel-nav-btn next" id="nextBtn" onclick="nextSlide()" aria-label="Next slide"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- science section  -->
            <section class="benefits-section" id="science" aria-label="Who can benefit from ChronoNAD+ supplement">
@@ -951,7 +1843,7 @@
                     <!-- Lifestyle Image from brand assets: lifestyle-group.jpg -->
                     <div class="benefits-image">
                         <div class="benefits-image-container">
-                            <img src="./assets/productStats.png" alt="Diverse group of healthy, active people representing ChronoNAD+ users across different ages and lifestyles including mature adults, fitness enthusiasts, and professionals">
+                            <img src="https://res.cloudinary.com/project-euler-v0/image/upload/f_auto,q_auto,c_fill,dpr_auto/v1758658583/productStats_dqmkv5.png" alt="Diverse group of healthy, active people representing ChronoNAD+ users across different ages and lifestyles including mature adults, fitness enthusiasts, and professionals">
                             <div class="benefits-image-overlay"></div>
                         </div>
                     </div>
@@ -1023,7 +1915,7 @@
                     <!-- Infographic from brand assets: advantage-infographic.jpg -->
                     <div class="advantage-image">
                         <div class="advantage-image-container">
-                            <img src="./assets/17xrise.gif" alt="Scientific infographic showing 1.7x NAD+ level increase with ChronoNAD+ formula compared to standard NAD+ supplements">
+                            <img src="https://res.cloudinary.com/project-euler-v0/image/upload/f_auto,q_auto,c_fill,dpr_auto/v1758658583/17xrise_mb27r6.gif" alt="Scientific infographic showing 1.7x NAD+ level increase with ChronoNAD+ formula compared to standard NAD+ supplements">
                          
                             <!-- Overlay Badge -->
                             <div class="advantage-badge">
@@ -1060,7 +1952,7 @@
                     <!-- Lifestyle Image from brand assets: lifestyle-group.jpg -->
                     <div class="benefits-image">
                         <div class="benefits-image-container">
-                            <img style="object-fit:cover; object-position: top;" src="./assets/fit.png" alt="Diverse group of healthy, active people representing ChronoNAD+ users across different ages and lifestyles including mature adults, fitness enthusiasts, and professionals">
+                            <img style="object-fit:cover; object-position: top;" src="https://res.cloudinary.com/project-euler-v0/image/upload/f_auto,q_auto,c_fill,dpr_auto/v1758658582/fit_eziwnb.png" alt="Diverse group of healthy, active people representing ChronoNAD+ users across different ages and lifestyles including mature adults, fitness enthusiasts, and professionals">
                             <div class="benefits-image-overlay"></div>
                         </div>
                         
@@ -1144,7 +2036,7 @@
                     <!-- Brand -->
                     <div class="footer-brand">
                         <div >
-                            <img style="width: 160px;" src="./assets/logo2.png" alt="Cell Start" >
+                            <img style="width: 160px;" src="https://res.cloudinary.com/project-euler-v0/image/upload/f_auto,q_auto,c_fill,dpr_auto/v1758658583/logo2_vziqnf.png" alt="Cell Start" >
                         </div>
                         <p>Premium NAD+ supplements for cellular health and vitality.</p>
                         <div class="footer-dots">
@@ -1194,4 +2086,640 @@
             </div>
         </footer>
     </main>
+
+    <script>
+     function checkDivContent() {
+        const div = document.getElementById('cartItems');
+        if (!div) {
+            console.warn('cartItems element not found in checkDivContent');
+            return;
+        }
+        
+        const count = Number(div.innerHTML) || 0;
+        if (count === 0) {
+            div.style.visibility = 'hidden';
+        } else {
+            div.style.visibility = 'visible';
+        }
+    }
+    checkDivContent();
+    
+    function openDrawer(event) {
+        if (event) {
+            event.stopPropagation();
+        }
+        console.log('Opening cart drawer');
+        
+        const drawer = document.getElementById('drawer');
+        const overlay = document.getElementById('cartOverlay');
+        
+        drawer.classList.add('active');
+        overlay.classList.add('active');
+        
+        // Prevent body scroll when drawer is open
+        document.body.style.overflow = 'hidden';
+    }
+    
+    function closeDrawer() {
+        const drawer = document.getElementById('drawer');
+        const overlay = document.getElementById('cartOverlay');
+        
+        drawer.classList.remove('active');
+        overlay.classList.remove('active');
+        
+        // Restore body scroll
+        document.body.style.overflow = '';
+    }
+    
+    window.addEventListener('scroll', function() {
+        // Only close drawer if it's currently open
+        const drawer = document.getElementById('drawer');
+        if (drawer && drawer.classList.contains('active')) {
+            closeDrawer();
+        }
+    });
+
+    // Product Carousel Functionality
+    let currentSlide = 0;
+    let totalSlides = 3; // Will be updated dynamically
+    
+    function updateCarousel() {
+        const track = document.getElementById('carouselTrack');
+        const indicatorsContainer = document.getElementById('indicators');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        
+        if (track) {
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            
+            // Update indicators
+            if (indicatorsContainer) {
+                const dots = indicatorsContainer.querySelectorAll('.carousel-indicator');
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentSlide);
+                });
+            }
+            
+            // Update button states
+            if (prevBtn) prevBtn.disabled = currentSlide === 0;
+            if (nextBtn) nextBtn.disabled = currentSlide === totalSlides - 1;
+        }
+    }
+    
+    function nextSlide() {
+        console.log('nextSlide called, currentSlide:', currentSlide);
+        if (currentSlide < totalSlides - 1) {
+            currentSlide++;
+            updateCarousel();
+        }
+    }
+    
+    function previousSlide() {
+        console.log('previousSlide called, currentSlide:', currentSlide);
+        if (currentSlide > 0) {
+            currentSlide--;
+            updateCarousel();
+        }
+    }
+    
+    function goToSlide(index) {
+        currentSlide = index;
+        updateCarousel();
+    }
+    
+    // Dynamic Product Data Structure
+    const productsData = [
+        {
+            id: 'chrononad-plus',
+            name: 'ChronoNAD+',
+            tagline: 'NAD+ At Most Affordable Price',
+            description: 'Our most valuable product delivers 3 months of continuous cellular support with maximum savings. Experience sustained energy, enhanced vitality, and optimal cellular health with our premium NAD+ formula enhanced with resveratrol.',
+            price: 34.99,
+            originalPrice: 54.99,
+            savings: 20,
+            image: 'https://res.cloudinary.com/project-euler-v0/image/upload/f_auto,q_auto,c_fill,dpr_auto/v1758658582/chrononad_w9brty.png',
+            badge: 'MOST POPULAR',
+            badgeClass: 'most-popular',
+            features: [
+                '90-day supply (90 capsules)',
+                '500mg NAD+ with Resveratrol per serving',
+                'Free shipping included'
+            ],
+            saveText: 'Save $20 • Best Value'
+        },
+        {
+            id: 'genomics-testing-kit',
+            name: 'Genomics Testing Kit',
+            tagline: 'Perfect for First-Time Users',
+            description: 'Begin your cellular wellness journey with our Genomics Testing Kit. Experience the transformative power of enhanced NAD+ levels with our scientifically-backed formula that delivers 1.7x higher bioavailability.',
+            price: 199.99,
+            originalPrice: 299.99,
+            savings: 100,
+            image: 'https://res.cloudinary.com/project-euler-v0/image/upload/f_auto,q_auto,c_fill,dpr_auto/v1758658582/Genomics_Testing_Kit_gzuzdr.png',
+            badge: null,
+            features: [
+                'Tests your NAD levels',
+                'Provides overall health analysis',
+                'Third-party lab tested'
+            ],
+            saveText: 'Save $100'
+        }
+    ];
+
+    // Cart Management System
+    let cart = [];
+    
+
+    // Dynamic Carousel Rendering Functions
+    function renderCarousel() {
+        console.log('🚀 Starting dynamic carousel render...');
+        
+        try {
+            const carouselTrack = document.getElementById('carouselTrack');
+            
+            if (!carouselTrack) {
+                console.error('❌ Carousel track element not found');
+                return false;
+            }
+            
+            console.log('✅ Carousel track found');
+            
+            // Clear existing slides
+            carouselTrack.innerHTML = '';
+            console.log('✅ Cleared existing slides');
+            
+            // Check if we have product data
+            if (!productsData || productsData.length === 0) {
+                console.error('❌ No product data available');
+                return false;
+            }
+            
+            console.log(`✅ Found ${productsData.length} products to render`);
+            
+            // Generate slides from product data
+            productsData.forEach((product, index) => {
+                try {
+                    const slide = createProductSlide(product, index);
+                    carouselTrack.appendChild(slide);
+                    console.log(`✅ Created slide ${index + 1}: ${product.name}`);
+                } catch (error) {
+                    console.error(`❌ Error creating slide for ${product.name}:`, error);
+                }
+            });
+            
+            // Update total slides count
+            totalSlides = productsData.length;
+            console.log(`✅ Total slides set to: ${totalSlides}`);
+            
+            // Create indicators
+            try {
+                createIndicators();
+                console.log('✅ Indicators created');
+            } catch (error) {
+                console.error('❌ Error creating indicators:', error);
+            }
+            
+            // Initialize carousel position
+            try {
+                updateCarousel();
+                console.log('✅ Carousel position initialized');
+            } catch (error) {
+                console.error('❌ Error updating carousel:', error);
+            }
+            
+            // Populate products object for backward compatibility
+            try {
+                populateProductsObject();
+                console.log('✅ Products object populated for cart compatibility');
+            } catch (error) {
+                console.error('❌ Error populating products object:', error);
+            }
+            
+            console.log(`🎉 Dynamic carousel rendered successfully with ${totalSlides} slides`);
+            console.log('🛍️ Products available:', productsData.map(p => p.name));
+            console.log('🔧 Use ProductManager in console for dynamic product management');
+            
+            return true;
+            
+        } catch (error) {
+            console.error('❌ Fatal error in renderCarousel:', error);
+            return false;
+        }
+    }
+    
+    function createProductSlide(product, index) {
+        const slide = document.createElement('div');
+        slide.className = 'carousel-slide';
+        
+        const featuresHTML = product.features.map(feature => `
+            <div class="carousel-feature-item">
+                <div class="tick-circle">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                    </svg>
+                </div>
+                <span class="carousel-feature-text">${feature}</span>
+            </div>
+        `).join('');
+        
+        const badgeHTML = product.badge ? 
+            `<div class="carousel-product-badge">${product.badge}</div>` : '';
+        
+        slide.innerHTML = `
+            <div class="carousel-product-image">
+                ${badgeHTML}
+                <img src="${product.image}" alt="${product.name}">
+            </div>
+            
+            <div class="carousel-product-details">
+                <div>
+                    <h3 class="carousel-product-name">${product.name}</h3>
+                    <p class="carousel-product-tagline">${product.tagline}</p>
+                </div>
+                
+                <p class="carousel-product-description">
+                    ${product.description}
+                </p>
+                
+                <div class="carousel-product-features">
+                    ${featuresHTML}
+                </div>
+                
+                <div class="carousel-product-footer">
+                    <div>
+                        <div class="carousel-price-section">
+                            <span class="carousel-price-current">$${product.price}</span>
+                            <span class="carousel-price-original">$${product.originalPrice}</span>
+                        </div>
+                        <p class="carousel-price-save">${product.saveText}</p>
+                    </div>
+                    <button class="btn btn-hero" data-product-name="${product.name}" data-product-price="${product.price}">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        `;
+        
+        // Add event listener to the button
+        const button = slide.querySelector('.btn');
+        if (button) {
+            button.addEventListener('click', function() {
+                addToCart(product.name, product.price);
+            });
+        }
+        
+        return slide;
+    }
+    
+    function populateProductsObject() {
+        // Clear existing products object
+        Object.keys(products).forEach(key => delete products[key]);
+        
+        // Populate from dynamic data
+        productsData.forEach(product => {
+            products[product.name] = {
+                name: product.name,
+                price: product.price,
+                image: product.image
+            };
+        });
+        
+        console.log('Products object updated:', products);
+    }
+    
+    function createIndicators() {
+        const indicatorsContainer = document.getElementById('indicators');
+        if (!indicatorsContainer) {
+            console.error('Indicators container not found');
+            return;
+        }
+        
+        indicatorsContainer.innerHTML = '';
+        
+        for (let i = 0; i < totalSlides; i++) {
+            const indicator = document.createElement('div');
+            indicator.className = 'carousel-indicator';
+            if (i === currentSlide) indicator.classList.add('active');
+            indicator.onclick = () => goToSlide(i);
+            indicatorsContainer.appendChild(indicator);
+        }
+    }
+
+    // Legacy products object for backward compatibility
+    const products = {};
+    
+    function addToCart(productName, price) {
+        console.log('=== ADD TO CART DEBUG ===');
+        console.log('Product Name:', productName);
+        console.log('Price:', price);
+        console.log('Products object:', products);
+        console.log('Product data:', products[productName]);
+        
+        try {
+            // Find existing item in cart
+            const existingItem = cart.find(item => item.name === productName);
+            
+            if (existingItem) {
+                existingItem.quantity += 1;
+                console.log('Updated existing item quantity:', existingItem.quantity);
+            } else {
+                const productData = products[productName];
+                if (!productData) {
+                    console.error('Product data not found for:', productName);
+                    alert(`Error: Product "${productName}" not found in product catalog`);
+                    return;
+                }
+                
+                const newItem = {
+                    name: productName,
+                    price: price,
+                    quantity: 1,
+                    image: productData.image || ''
+                };
+                
+                console.log('Adding new item:', newItem);
+                cart.push(newItem);
+            }
+            
+            console.log('Cart after adding:', cart);
+            
+            updateCartDisplay();
+            updateCartCounter();
+            
+            // Show a success message
+            showCartMessage(`${productName} added to cart!`);
+            
+        } catch (error) {
+            console.error('Error in addToCart:', error);
+            alert('An error occurred while adding the item to cart: ' + error.message);
+        }
+    }
+    
+    function removeFromCart(productName) {
+        console.log('=== REMOVE FROM CART DEBUG ===');
+        console.log('Removing product:', productName);
+        console.log('Cart before removal:', cart);
+        
+        try {
+            const itemExists = cart.find(item => item.name === productName);
+            if (!itemExists) {
+                console.warn('Item not found in cart:', productName);
+                showCartMessage(`Item "${productName}" not found in cart`);
+                return;
+            }
+            
+            cart = cart.filter(item => item.name !== productName);
+            console.log('Cart after removal:', cart);
+            
+            updateCartDisplay();
+            updateCartCounter();
+            showCartMessage(`${productName} removed from cart`);
+            
+            console.log('Successfully removed item from cart');
+        } catch (error) {
+            console.error('Error in removeFromCart:', error);
+            alert('An error occurred while removing the item: ' + error.message);
+        }
+    }
+    
+    function updateQuantity(productName, change) {
+        console.log('=== UPDATE QUANTITY DEBUG ===');
+        console.log('Product:', productName, 'Change:', change);
+        console.log('Cart before update:', cart);
+        
+        try {
+            const item = cart.find(item => item.name === productName);
+            if (item) {
+                item.quantity += change;
+                console.log('New quantity:', item.quantity);
+                
+                if (item.quantity <= 0) {
+                    console.log('Quantity <= 0, removing item');
+                    removeFromCart(productName);
+                } else {
+                    updateCartDisplay();
+                    updateCartCounter();
+                }
+            } else {
+                console.error('Item not found in cart:', productName);
+            }
+        } catch (error) {
+            console.error('Error in updateQuantity:', error);
+            alert('An error occurred while updating quantity: ' + error.message);
+        }
+    }
+    
+    function updateCartDisplay() {
+        console.log('=== UPDATE CART DISPLAY DEBUG ===');
+        const cartContainer = document.getElementById('cartItemsContainer');
+        const cartEmptyMessage = document.getElementById('cartEmptyMessage');
+        const cartFooter = document.getElementById('cartFooter');
+        const cartTotalAmount = document.getElementById('cartTotalAmount');
+        
+        console.log('Cart container:', cartContainer);
+        console.log('Cart empty message:', cartEmptyMessage);
+        console.log('Cart footer:', cartFooter);
+        console.log('Cart total amount:', cartTotalAmount);
+        console.log('Current cart:', cart);
+        
+        // Check if all required elements exist
+        if (!cartContainer) {
+            console.error('cartItemsContainer element not found!');
+            return;
+        }
+        if (!cartFooter) {
+            console.error('cartFooter element not found!');
+            return;
+        }
+        if (!cartTotalAmount) {
+            console.error('cartTotalAmount element not found!');
+            return;
+        }
+        
+        if (cart.length === 0) {
+            if (cartEmptyMessage) {
+                cartEmptyMessage.style.display = 'block';
+            }
+            cartFooter.style.display = 'none';
+            // Don't create duplicate ID - just update content
+            cartContainer.innerHTML = '<div class="cart-empty">Your cart is empty<br><small>Add some products to get started!</small></div>';
+        } else {
+            if (cartEmptyMessage) {
+                cartEmptyMessage.style.display = 'none';
+            }
+            cartFooter.style.display = 'block';
+            
+            // Generate cart items HTML
+            const cartItemsHTML = cart.map(item => {
+                console.log('Rendering cart item:', item);
+                console.log('Item image URL:', item.image);
+                
+                // Escape quotes properly for onclick handlers
+                const escapedName = item.name.replace(/'/g, "\\'").replace(/"/g, '\\"');
+                
+                return `
+                <div class="cart-item">
+                    <div class="cart-item-image">
+                        <img src="${item.image}" 
+                             alt="${item.name}" 
+                             onload="console.log('✅ Image loaded successfully for ${item.name}:', this.src); this.classList.add('loaded');"
+                             onerror="console.error('❌ Failed to load image for ${item.name}:', this.src); console.log('Attempting fallback image...'); this.src='https://res.cloudinary.com/project-euler-v0/image/upload/f_auto,q_auto,c_fill,dpr_auto/v1758658582/chrononad_w9brty.png';"
+                             crossorigin="anonymous">
+                    </div>
+                    <div class="cart-item-details">
+                        <div class="cart-item-name">${item.name}</div>
+                        <div class="cart-item-price">$${item.price}</div>
+                    </div>
+                    <div class="cart-item-quantity">
+                        <button class="quantity-btn" onclick="updateQuantity('${escapedName}', -1)" title="Decrease quantity">-</button>
+                        <span class="quantity-display">${item.quantity}</span>
+                        <button class="quantity-btn" onclick="updateQuantity('${escapedName}', 1)" title="Increase quantity">+</button>
+                    </div>
+                    <button class="remove-item-btn" onclick="removeFromCart('${escapedName}')" title="Remove from cart">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXRyYXNoLWljb24gbHVjaWRlLXRyYXNoIj48cGF0aCBkPSJNMTkgNnYxNGEyIDIgMCAwIDEtMiAySDdhMiAyIDAgMCAxLTItMlY2Ii8+PHBhdGggZD0iTTMgNmgxOCIvPjxwYXRoIGQ9Ik04IDZWNGEyIDIgMCAwIDEgMi0yaDRhMiAyIDAgMCAxIDIgMnYyIi8+PC9zdmc+" alt="Delete" style="width: 14px; height: 14px; filter: brightness(0) invert(1);">
+                    </button>
+                </div>
+            `;
+            }).join('');
+            
+            console.log('Generated HTML:', cartItemsHTML);
+            cartContainer.innerHTML = cartItemsHTML;
+            
+            // Update total
+            const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            cartTotalAmount.textContent = `$${total.toFixed(2)}`;
+            console.log('Cart total:', total);
+        }
+    }
+    
+    function updateCartCounter() {
+        console.log('=== UPDATE CART COUNTER DEBUG ===');
+        const cartItems = document.getElementById('cartItems');
+        console.log('Cart items element:', cartItems);
+        
+        if (!cartItems) {
+            console.error('cartItems element not found!');
+            return;
+        }
+        
+        const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+        cartItems.innerHTML = totalItems;
+        console.log('Updated cart counter to:', totalItems);
+        
+        // Add animation class when there are items
+        if (totalItems > 0) {
+            cartItems.classList.add('has-items');
+        } else {
+            cartItems.classList.remove('has-items');
+        }
+        
+        checkDivContent();
+    }
+    
+    function showCartMessage(message) {
+        // Create a temporary toast message
+        const toast = document.createElement('div');
+        
+        // Check if mobile screen
+        const isMobile = window.innerWidth <= 768;
+        
+        toast.style.cssText = `
+            position: fixed;
+            ${isMobile ? 
+                `bottom: 20px; 
+                 left: 20px; 
+                 right: 20px; 
+                 width: calc(100% - 40px);` : 
+                `top: 80px; 
+                 right: 20px; 
+                 max-width: 300px;`}
+            background: #10b981;
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 0.5rem;
+            z-index: 1010;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: 600;
+            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
+            animation: ${isMobile ? 'slideInUp' : 'slideInRight'} 0.3s ease-out;
+            text-align: center;
+        `;
+        toast.textContent = message;
+        
+        // Add animation CSS if not already present
+        if (!document.querySelector('#toast-animations')) {
+            const style = document.createElement('style');
+            style.id = 'toast-animations';
+            style.textContent = `
+                @keyframes slideInRight {
+                    from { transform: translateX(100%); opacity: 0; }
+                    to { transform: translateX(0); opacity: 1; }
+                }
+                @keyframes slideOutRight {
+                    from { transform: translateX(0); opacity: 1; }
+                    to { transform: translateX(100%); opacity: 0; }
+                }
+                @keyframes slideInUp {
+                    from { transform: translateY(100%); opacity: 0; }
+                    to { transform: translateY(0); opacity: 1; }
+                }
+                @keyframes slideOutDown {
+                    from { transform: translateY(0); opacity: 1; }
+                    to { transform: translateY(100%); opacity: 0; }
+                }
+            `;
+            document.head.appendChild(style);
+        }
+        
+        document.body.appendChild(toast);
+        
+        // Remove toast after 3 seconds
+        setTimeout(() => {
+            toast.style.animation = isMobile ? 'slideOutDown 0.3s ease-out' : 'slideOutRight 0.3s ease-out';
+            setTimeout(() => {
+                if (toast.parentNode) {
+                    toast.parentNode.removeChild(toast);
+                }
+            }, 300);
+        }, 3000);
+    }
+    
+    function checkout() {
+        if (cart.length === 0) {
+            alert('Your cart is empty!');
+            return;
+        }
+        
+        const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+        const itemCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+        
+        alert(`Checkout initiated!\n\nItems: ${itemCount}\nTotal: $${total.toFixed(2)}\n\nRedirecting to secure checkout...`);
+        
+        // In a real implementation, you would redirect to a payment processor
+        // window.location.href = '/checkout';
+    }
+    
+
+    // Initialize carousel dynamically when page is fully loaded 
+    window.addEventListener('load', function() {
+        console.log('🔄 Page fully loaded - Running backup initialization...');
+        setTimeout(() => {
+            renderCarousel(); // Use dynamic rendering instead of static initialization
+            // initCart();
+        }, 100);
+    });
+    
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') previousSlide();
+        if (e.key === 'ArrowRight') nextSlide();
+        if (e.key === 'Escape') {
+            const drawer = document.getElementById('drawer');
+            if (drawer && drawer.classList.contains('active')) {
+                closeDrawer();
+            }
+        }
+    });
+
+    </script>
 </body>
